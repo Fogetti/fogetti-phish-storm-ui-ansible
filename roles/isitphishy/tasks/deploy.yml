@@ -6,6 +6,9 @@
 - name: Get is-it-phishy from git
   git: repo=git@github.com:Fogetti/fogetti-phish-storm-ui.git dest={{ phish_dir }} force=yes version=master
 
+- name: Install the latest changes
+  npm: path={{ phish_dir }}
+
 - name: restart is-it-phishy
   command: "{{ phish_restart_cmd }}"
   environment:
