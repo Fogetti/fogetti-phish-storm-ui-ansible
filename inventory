@@ -1,0 +1,4 @@
+[dev_phishing_servers]
+valentine
+
+[dev_phishing_servers:vars]

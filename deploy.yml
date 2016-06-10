@@ -1,0 +1,5 @@
+---
+- hosts: "{{ env }}_phishing_servers"
+  roles:
+    - common
+    - isitphishy

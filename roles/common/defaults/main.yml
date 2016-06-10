@@ -1,0 +1,9 @@
+root_dir: "/home/fogetti"
+phish_dir: "{{ root_dir }}/services/is-it-phishy"
+phish_bin_dir: "{{ phish_dir }}"
+
+# Phishing app general config
+phish_install_cmd: "{{ phish_bin_dir }}/node install"
+phish_start_cmd: "supervisorctl start is-it-phishy"
+phish_stop_cmd: "supervisorctl stop is-it-phishy"
+phish_restart_cmd: "supervisorctl restart is-it-phishy"
