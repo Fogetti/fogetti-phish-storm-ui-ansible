@@ -9,13 +9,13 @@
 - name: restart is-it-phishy
   command: "{{ phish_restart_cmd }}"
   environment:
-    REDIS_HOST: {{ redis_host }}
-    REDIS_PORT: {{ redis_port }}
-    REDIS_AUTH: {{ redis_auth }}
-    KAFKA_HOST: {{ kafka_host }}
-    KAFKA_PORT: {{ kafka_port }}
-    KAFKA_TOPIC: {{ kafka_topic }}
-    KAFKA_ZK_CONNECTION: {{ kafka_zk_connection }}
-    HTTP_LISTEN_ADDRESS: {{ http_listen_address }}
-    HTTP_PORT: {{ http_port }}
-    HTTPS_PORT: {{ https_port }}
+    REDIS_HOST: "{{ redis_host }}"
+    REDIS_PORT: "{{ redis_port }}"
+    REDIS_AUTH: "{{ redis_auth }}"
+    KAFKA_HOST: "{{ kafka_host }}"
+    KAFKA_PORT: "{{ kafka_port }}"
+    KAFKA_TOPIC: "{{ kafka_topic }}"
+    KAFKA_ZK_CONNECTION: "{{ kafka_zk_connection }}"
+    HTTP_LISTEN_ADDRESS: "{{ http_listen_address }}"
+    HTTP_PORT: "{{ http_port }}"
+    HTTPS_PORT: "{{ https_port }}"
