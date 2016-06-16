@@ -9,6 +9,9 @@
 - name: Install the latest changes
   npm: path={{ phish_dir }}
 
+- name: Configure the app settings
+  template: src=config.js.j2 dest={{ phish_dir }}/config.js
+
 - name: restart is-it-phishy
   command: "{{ phish_restart_cmd }}"
   environment:

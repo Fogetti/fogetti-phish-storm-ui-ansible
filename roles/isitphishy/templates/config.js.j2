@@ -1,0 +1,19 @@
+var config = {};
+
+config.redis = {};
+config.kafka = {};
+config.web = {};
+
+config.redis.host = process.env.REDIS_HOST || '{{ redis_host }}';
+config.redis.port = process.env.REDIS_PORT || {{ redis_port }};
+config.redis.auth = process.env.REDIS_AUTH || '{{ redis_auth }}';
+config.kafka.host = process.env.KAFKA_HOST || '{{ kafka_host }}';
+config.kafka.port = process.env.KAFKA_PORT || {{ kafka_port }};
+config.kafka.requesttopic = process.env.KAFKA_REQUEST_TOPIC || '{{ kafka_request_topic }}';
+config.kafka.responsetopic = process.env.KAFKA_RESPONSE_TOPIC || '{{ kafka_response_topic }}';
+config.kafka.zkconnection = process.env.KAFKA_ZK_CONNECTION || '{{ kafka_zk_connection }}';
+config.web.httpaddress = process.env.HTTP_LISTEN_ADDRESS || '{{ http_listen_address }}';
+config.web.httpport = process.env.HTTP_PORT || {{ http_port }};
+config.web.httpsport = process.env.HTTPS_PORT || {{ https_port }};
+
+module.exports = config;
