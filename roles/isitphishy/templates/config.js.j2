@@ -15,6 +15,6 @@ config.kafka.zkconnection = process.env.KAFKA_ZK_CONNECTION || '{{ kafka_zk_conn
 config.web.httpaddress = process.env.HTTP_LISTEN_ADDRESS || '{{ http_listen_address }}';
 config.web.httpport = process.env.HTTP_PORT || {{ http_port }};
 config.web.httpsport = process.env.HTTPS_PORT || {{ https_port }};
-config.recaptcha.secret = process.env.RECAPTCHA_SECRET || {{ recaptcha_secret }};
+config.recaptcha.secret = process.env.RECAPTCHA_SECRET || '{{ recaptcha_secret }}';
 
 module.exports = config;
